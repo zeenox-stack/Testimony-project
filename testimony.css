@@ -1,0 +1,104 @@
+body { 
+    background-color: hsl(0, 0%, 81%);
+} 
+
+.cards { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px; 
+    padding: 2em;
+    grid-template-areas: 
+    "card-one card-one card-two card-three" 
+    "card-four card-five card-five card-three"
+    ; 
+    font-family: 'Barlow', sans-serif;
+} 
+
+.card-one { 
+    grid-area: card-one;  
+    background-color: hsl(263, 55%, 52%); 
+    border-radius: 12px; 
+    padding: 2em; 
+    color: white; 
+    font-family: inherit; 
+    background-image: url(./images/bg-pattern-quotation.svg); 
+    background-repeat: no-repeat; 
+    background-position-x: 25em;
+} 
+
+.card-two { 
+              grid-area: card-two; 
+              background-color: hsl(217, 19%, 35%); 
+    border-radius: 12px; 
+    padding: 2em; 
+    color: white; 
+    font-family: inherit;
+} 
+
+.card-three { 
+    grid-area: card-three; 
+    background-color: hsl(0, 0%, 100%); 
+    border-radius: 12px; 
+    padding: 2em; 
+    font-family: inherit;
+} 
+
+.card-four {
+    grid-area: card-four; 
+    background-color: hsl(0, 0%, 100%); 
+    border-radius: 12px; 
+    padding: 2em; 
+    font-family: inherit;
+} 
+
+.card-five { 
+    grid-area: card-five; 
+    background-color: hsl(219, 29%, 14%); 
+    border-radius: 12px; 
+    padding: 2em; 
+    color: white; 
+    font-family: inherit;
+} 
+
+.profile-info { 
+    display: flex;
+} 
+
+img { 
+    height: 6vh; 
+    width: 6vh; 
+    border-radius: 50%; 
+    padding: 1em;
+} 
+
+span { 
+    color: inherit; 
+    opacity: 0.5;
+} 
+
+.testimony { 
+    font-size: 13px; 
+    opacity: .7;
+}
+
+@media screen and (max-width: 768px) { 
+    .cards { 
+             grid-template-columns: 1fr; 
+             grid-template-rows: repeat(1, 1fr); 
+             grid-template-areas: 
+             "card-one"  
+             "card-two" 
+             "card-four" 
+             "card-five" 
+             "card-three"
+             ;
+    }
+    
+    .card-one { 
+        background-position-x: 13em; 
+    } 
+
+    .card-two { 
+    }
+}
